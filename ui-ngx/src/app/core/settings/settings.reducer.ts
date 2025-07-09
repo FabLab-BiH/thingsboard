@@ -18,7 +18,7 @@ import { SettingsState } from './settings.models';
 import { SettingsActions, SettingsActionTypes } from './settings.actions';
 
 export const initialState: SettingsState = {
-  userLang: null
+  userLang: 'bs_BA'
 };
 
 export function settingsReducer(

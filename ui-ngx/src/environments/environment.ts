@@ -22,9 +22,9 @@ export const environment = {
   appTitle: 'ThingsBoard',
   production: false,
 // @ts-ignore
-  tbVersion: TB_VERSION,
+  tbVersion: 'DEV',
 // @ts-ignore
-  supportedLangs: SUPPORTED_LANGS,
+  supportedLangs: ['bs_BA'],
   defaultLang: 'bs_BA'
 };
 

@@ -22,6 +22,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { merge } from 'rxjs';
 import { distinctUntilChanged, filter, map, tap, withLatestFrom } from 'rxjs/operators';
 
+import { ActionSettingsChangeLanguage } from './settings.actions';
 import { SettingsActions, SettingsActionTypes, } from './settings.actions';
 import { selectSettingsState } from './settings.selectors';
 import { AppState } from '@app/core/core.state';
@@ -48,6 +49,15 @@ export class SettingsEffects {
     @Inject(DOCUMENT) private document: Document,
   ) {
   }
+
+  forceBosnian$ = createEffect(() => 
+    this.actions$.pipe(
+      ofType('[Router] Router Navigation'), // Or another startup action
+      tap(() => {
+        this.store.dispatch(new ActionSettingsChangeLanguage({ userLang: 'bs_BA' }));
+      })
+    ), { dispatch: false }
+  );
 
   setTranslateServiceLanguage = createEffect(() => this.actions$.pipe(
     ofType(
