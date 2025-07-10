@@ -15,12 +15,12 @@
  */
 :host-context(.login-logo) {
   img.tb-logo-title {
-    width: 280px;
-    height: 60px;
-    text-decoration: none;
+    height: 120px;    // fixed height
+    width: auto;     // auto width to keep aspect ratio
     cursor: pointer;
     border: none;
     transform: none;
+    margin-top: 35px;
 
     &:focus {
       outline: 0;
