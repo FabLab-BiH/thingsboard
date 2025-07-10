@@ -9332,7 +9332,7 @@
                 },
                 "step2": {
                     "title": "Povežite uređaj",
-                    "content-before": "<p>Da biste povezali uređaj, potrebno je da dobijete pristupne podatke uređaja. Preporučujemo da koristite Zadane automatski generisane pristupne podatke, tj. access token za ovaj vodič.</p><ul><li>Idite na tabelu uređaja</li><li>Kliknite na red uređaja da otvorite detalje</li><li>Pritisnite dugme „Kopiraj access token“</li></ul><p>Koristite jednostavne komande za slanje podataka preko HTTP protokola. Ne zaboravite da zamijenite <em>$ACCESS_TOKEN</em> sa tokenom vašeg uređaja:</p>",
+                    "content-before": "<p>Da biste povezali uređaj, potrebno je da dobijete pristupne podatke uređaja. Preporučujemo da koristite zadane automatski generisane pristupne podatke, tj. access token za ovaj vodič.</p><ul><li>Idite na tabelu uređaja</li><li>Kliknite na red uređaja da otvorite detalje</li><li>Pritisnite dugme „Kopiraj access token“</li></ul><p>Koristite jednostavne komande za slanje podataka preko HTTP protokola. Ne zaboravite da zamijenite <em>$ACCESS_TOKEN</em> sa tokenom vašeg uređaja:</p>",
                     "ubuntu": {
                         "install-curl": "Instalirajte cURL na Ubuntu:"
                     },
@@ -9340,7 +9340,7 @@
                         "install-curl": "Instalirajte cURL na MacOS:"
                     },
                     "windows": {
-                        "install-curl": "Počevši od Windows 10 b17063, cURL je dostupan Zadano."
+                        "install-curl": "Počevši od Windows 10 b17063, cURL je dostupan zadano."
                     },
                     "replace-access-token": "Zamijenite <em>$ACCESS_TOKEN</em> tokenom vašeg uređaja:",
                     "content-after": "<p>Možete koristiti i druge protokole kao što su MQTT, CoAP, itd.</p><p>Pratite dokumentaciju kako to učiniti:</p>",
