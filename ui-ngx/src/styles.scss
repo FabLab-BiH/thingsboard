@@ -23,6 +23,17 @@
 @import './scss/mixins';
 @import './scss/fonts';
 
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url('/assets/fonts/IbmPlexMono.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --tb-font-family: 'IBMPlexMono', Roboto, sans-serif;
+}
+
 body, html {
   height: 100%;
   min-height: 100%;
@@ -64,14 +75,51 @@ tb-root {
 
 body,
 button,
-html,
 input,
 select,
 textarea,
-td,
-th {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 16px;
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-outlined-button,
+.mat-mdc-icon-button,
+.mat-mdc-menu-item,
+.mdc-button,
+.mdc-text-field__input,
+.mat-mdc-select-value,
+.mat-mdc-tab-label,
+.mat-mdc-option,
+.mat-mdc-dialog-title,
+.mat-mdc-dialog-content,
+.mat-mdc-tooltip,
+.mat-mdc-card-title,
+.mat-mdc-card-content,
+.mat-mdc-chip,
+.mat-mdc-form-field,
+.mat-mdc-checkbox,
+.mat-mdc-radio-button,
+.mat-mdc-slide-toggle,
+.mat-mdc-list-item,
+.mat-mdc-table,
+.mat-mdc-paginator,
+.mat-mdc-toolbar,
+.mat-mdc-snack-bar-label,
+.mat-mdc-dialog-actions .mdc-button,
+.mat-mdc-menu-content,
+.mat-mdc-autocomplete-panel,
+.mat-mdc-select-panel,
+.mat-mdc-dialog-container,
+.mat-mdc-tab-body-content,
+.mat-mdc-expansion-panel,
+.mat-mdc-progress-spinner,
+.mat-mdc-tooltip,
+.mat-toolbar,
+.mat-toolbar-row,
+.mat-mdc-toolbar,
+.mat-mdc-toolbar-row,
+.mat-toolbar .mat-mdc-toolbar,
+.tb-header,
+.tb-header {
+  font-family: var(--tb-font-family) !important;
 }
 
 body {
@@ -90,7 +138,7 @@ a:not(.mat-mdc-button-base, .mdc-tab) {
 a:hover,
 a:focus {
   &:not(.mat-mdc-button-base, .mdc-tab) {
-    border-bottom: 1px solid #4054b2;
+    border-bottom: 1px solid #353535;
   }
 }
 
