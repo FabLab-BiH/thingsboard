@@ -141,20 +141,8 @@ export class WidgetComponentService {
         })
       ));
 
-      widgetModulesTasks.push(from(import('flot/src/jquery.flot.js')).pipe(
-        mergeMap(() => {
-          const flotJsPluginsTasks: Observable<any>[] = [];
-          flotJsPluginsTasks.push(from(import('flot/lib/jquery.colorhelpers.js')));
-          flotJsPluginsTasks.push(from(import('flot/src/plugins/jquery.flot.time.js')));
-          flotJsPluginsTasks.push(from(import('flot/src/plugins/jquery.flot.selection.js')));
-          flotJsPluginsTasks.push(from(import('flot/src/plugins/jquery.flot.pie.js')));
-          flotJsPluginsTasks.push(from(import('flot/src/plugins/jquery.flot.crosshair.js')));
-          flotJsPluginsTasks.push(from(import('flot/src/plugins/jquery.flot.stack.js')));
-          flotJsPluginsTasks.push(from(import('flot/src/plugins/jquery.flot.symbol.js')));
-          flotJsPluginsTasks.push(from(import('flot.curvedlines/curvedLines.js')));
-          return forkJoin(flotJsPluginsTasks);
-        })
-      ));
+      // Flot is loaded globally via angular.json scripts, no need to import dynamically
+      widgetModulesTasks.push(of(true));
 
       widgetModulesTasks.push(from(import('@home/components/widget/lib/flot-widget')).pipe(
         tap((mod) => {

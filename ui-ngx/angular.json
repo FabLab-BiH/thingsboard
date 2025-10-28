@@ -132,7 +132,16 @@
               "node_modules/prismjs/components/prism-json.min.js",
               "node_modules/prismjs/components/prism-javascript.min.js",
               "node_modules/prismjs/components/prism-typescript.min.js",
-              "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js"
+              "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js",
+              "node_modules/flot/jquery.flot.js",
+              "node_modules/flot/jquery.colorhelpers.js",
+              "node_modules/flot/plugins/jquery.flot.time.js",
+              "node_modules/flot/plugins/jquery.flot.selection.js",
+              "node_modules/flot/plugins/jquery.flot.pie.js",
+              "node_modules/flot/plugins/jquery.flot.crosshair.js",
+              "node_modules/flot/plugins/jquery.flot.stack.js",
+              "node_modules/flot/plugins/jquery.flot.symbol.js",
+              "node_modules/flot.curvedlines/curvedLines.js"
             ],
             "allowedCommonJsDependencies": [
               "*"
