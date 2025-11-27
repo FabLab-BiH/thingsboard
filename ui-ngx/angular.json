@@ -122,17 +122,19 @@
               ]
             },
             "scripts": [
-              "node_modules/tinycolor2/dist/tinycolor-min.js",
-              "node_modules/split.js/dist/split.min.js",
-              "node_modules/systemjs/dist/system.min.js",
-              "node_modules/marked/lib/marked.umd.js",
-              "node_modules/prismjs/prism.js",
-              "node_modules/prismjs/components/prism-css.min.js",
-              "node_modules/prismjs/components/prism-bash.min.js",
-              "node_modules/prismjs/components/prism-json.min.js",
-              "node_modules/prismjs/components/prism-javascript.min.js",
-              "node_modules/prismjs/components/prism-typescript.min.js",
-              "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js"
+          "node_modules/jquery/dist/jquery.min.js",
+          "node_modules/tooltipster/dist/js/tooltipster.bundle.min.js",
+          "node_modules/tinycolor2/dist/tinycolor-min.js",
+          "node_modules/split.js/dist/split.min.js",
+          "node_modules/systemjs/dist/system.min.js",
+          "node_modules/marked/lib/marked.umd.js",
+          "node_modules/prismjs/prism.js",
+          "node_modules/prismjs/components/prism-css.min.js",
+          "node_modules/prismjs/components/prism-bash.min.js",
+          "node_modules/prismjs/components/prism-json.min.js",
+          "node_modules/prismjs/components/prism-javascript.min.js",
+          "node_modules/prismjs/components/prism-typescript.min.js",
+          "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js"
             ],
             "allowedCommonJsDependencies": [
               "*"

@@ -424,6 +424,16 @@
     <build>
         <finalName>${pkg.name}-${project.version}</finalName>
         <resources>
+              <resource>
+          <directory>${project.basedir}/../ui-ngx/target/generated-resources/public</directory>
+          <targetPath>public</targetPath>
+          <filtering>false</filtering>
+      </resource>
+      <resource>
+          <directory>${project.basedir}/../ui-ngx/target/generated-resources/public/static</directory>
+          <targetPath>public/static</targetPath>
+          <filtering>false</filtering>
+      </resource>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
                 <filtering>true</filtering>

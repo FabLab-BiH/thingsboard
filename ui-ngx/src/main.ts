@@ -27,6 +27,8 @@ import $ from 'jquery';
 (window as any).jQuery = $;
 (window as any).$ = $;
 
+// Note: Tooltipster is loaded globally via angular.json scripts array
+
 if (environment.production) {
   enableProdMode();
 }

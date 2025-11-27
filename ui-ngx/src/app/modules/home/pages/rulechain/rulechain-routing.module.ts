@@ -20,7 +20,7 @@ import { ActivatedRouteSnapshot, Router, RouterModule, RouterStateSnapshot, Rout
 import { EntitiesTableComponent } from '../../components/entity/entities-table.component';
 import { Authority } from '@shared/models/authority.enum';
 import { RuleChainsTableConfigResolver } from '@modules/home/pages/rulechain/rulechains-table-config.resolver';
-import { from, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { BreadCrumbConfig, BreadCrumbLabelFunction } from '@shared/components/breadcrumb';
 import {
   RuleChainMetaData,
@@ -35,7 +35,7 @@ import { MODULES_MAP } from '@shared/public-api';
 import { IModulesMap } from '@modules/common/modules-map.models';
 
 @Injectable()
-export class RuleChainResolver  {
+export class RuleChainResolver {
 
   constructor(private ruleChainService: RuleChainService) {
   }
@@ -47,7 +47,7 @@ export class RuleChainResolver  {
 }
 
 @Injectable()
-export class RuleChainMetaDataResolver  {
+export class RuleChainMetaDataResolver {
 
   constructor(private ruleChainService: RuleChainService) {
   }
@@ -59,10 +59,10 @@ export class RuleChainMetaDataResolver  {
 }
 
 @Injectable()
-export class RuleNodeComponentsResolver  {
+export class RuleNodeComponentsResolver {
 
   constructor(private ruleChainService: RuleChainService,
-              @Optional() @Inject(MODULES_MAP) private modulesMap: IModulesMap) {
+    @Optional() @Inject(MODULES_MAP) private modulesMap: IModulesMap) {
   }
 
   resolve(route: ActivatedRouteSnapshot): Observable<Array<RuleNodeComponentDescriptor>> {
@@ -70,22 +70,12 @@ export class RuleNodeComponentsResolver  {
   }
 }
 
-@Injectable()
-export class TooltipsterResolver  {
-
-  constructor() {
-  }
-
-  resolve(route: ActivatedRouteSnapshot): Observable<any> {
-    return from(import('tooltipster'));
-  }
-}
 
 @Injectable()
-export class RuleChainImportGuard  {
+export class RuleChainImportGuard {
 
   constructor(private itembuffer: ItemBufferService,
-              private router: Router) {
+    private router: Router) {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
@@ -101,17 +91,17 @@ export class RuleChainImportGuard  {
 
 export const ruleChainBreadcumbLabelFunction: BreadCrumbLabelFunction<RuleChainPageComponent>
   = ((route, translate, component) => {
-  let label: string = component.ruleChain.name;
-  if (component.ruleChain.root) {
-    label += ` (${translate.instant('rulechain.root')})`;
-  }
-  return label;
-});
+    let label: string = component.ruleChain.name;
+    if (component.ruleChain.root) {
+      label += ` (${translate.instant('rulechain.root')})`;
+    }
+    return label;
+  });
 
 export const importRuleChainBreadcumbLabelFunction: BreadCrumbLabelFunction<RuleChainPageComponent> =
   ((route, translate, component) => {
-  return `${translate.instant('rulechain.import')}: ${component.ruleChain.name}`;
-});
+    return `${translate.instant('rulechain.import')}: ${component.ruleChain.name}`;
+  });
 
 const routes: Routes = [
   {
@@ -152,8 +142,7 @@ const routes: Routes = [
         resolve: {
           ruleChain: RuleChainResolver,
           ruleChainMetaData: RuleChainMetaDataResolver,
-          ruleNodeComponents: RuleNodeComponentsResolver,
-          tooltipster: TooltipsterResolver
+          ruleNodeComponents: RuleNodeComponentsResolver
         }
       },
       {
@@ -173,8 +162,7 @@ const routes: Routes = [
         },
         loadChildren: () => import('./rulechain-page.module').then(m => m.RuleChainPageModule),
         resolve: {
-          ruleNodeComponents: RuleNodeComponentsResolver,
-          tooltipster: TooltipsterResolver
+          ruleNodeComponents: RuleNodeComponentsResolver
         }
       }
     ]
@@ -190,7 +178,6 @@ const routes: Routes = [
     RuleChainResolver,
     RuleChainMetaDataResolver,
     RuleNodeComponentsResolver,
-    TooltipsterResolver,
     RuleChainImportGuard
   ]
 })

@@ -36,8 +36,7 @@ import {
   ruleChainBreadcumbLabelFunction,
   RuleChainImportGuard,
   RuleChainResolver,
-  RuleNodeComponentsResolver,
-  TooltipsterResolver
+  RuleNodeComponentsResolver
 } from '@home/pages/rulechain/rulechain-routing.module';
 import { EntityDetailsPageComponent } from '@home/components/entity/entity-details-page.component';
 import { entityDetailsPageBreadcrumbLabelFunction } from '@home/pages/home-pages.models';
@@ -295,8 +294,7 @@ const routes: Routes = [
                 resolve: {
                   ruleChain: RuleChainResolver,
                   ruleChainMetaData: RuleChainMetaDataResolver,
-                  ruleNodeComponents: RuleNodeComponentsResolver,
-                  tooltipster: TooltipsterResolver
+                  ruleNodeComponents: RuleNodeComponentsResolver
                 }
               }
             ]
@@ -341,8 +339,7 @@ const routes: Routes = [
             resolve: {
               ruleChain: RuleChainResolver,
               ruleChainMetaData: RuleChainMetaDataResolver,
-              ruleNodeComponents: RuleNodeComponentsResolver,
-              tooltipster: TooltipsterResolver
+              ruleNodeComponents: RuleNodeComponentsResolver
             }
           },
           {
@@ -362,8 +359,7 @@ const routes: Routes = [
             },
             loadChildren: () => import('../rulechain/rulechain-page.module').then(m => m.RuleChainPageModule),
             resolve: {
-              ruleNodeComponents: RuleNodeComponentsResolver,
-              tooltipster: TooltipsterResolver
+              ruleNodeComponents: RuleNodeComponentsResolver
             }
           }
         ]
