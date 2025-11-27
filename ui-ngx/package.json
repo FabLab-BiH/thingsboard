@@ -47,7 +47,7 @@
     "core-js": "^3.39.0",
     "dayjs": "1.11.13",
     "echarts": "https://github.com/thingsboard/echarts/archive/5.5.1-TB.tar.gz",
-    "flot": "github:thingsboard/flot#0.9-work",
+    "flot": "^4.2.2",
     "flot.curvedlines": "https://github.com/MichaelZinsmaier/CurvedLines.git#master",
     "font-awesome": "^4.7.0",
     "html2canvas": "^1.4.1",

@@ -20,18 +20,22 @@
         "build": {
           "builder": "@angular-builders/custom-esbuild:application",
           "options": {
-            "plugins": ["./esbuild/tb-esbuild-plugins.ts"],
+            "plugins": [
+              "./esbuild/tb-esbuild-plugins.ts"
+            ],
             "loader": {
-                ".raw": "text"
+              ".raw": "text"
             },
             "outputPath": {
-                "base": "target/generated-resources/public",
-                "media": ".",
-                "browser": ""
+              "base": "target/generated-resources/public",
+              "media": ".",
+              "browser": ""
             },
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["src/polyfills.ts"],
+            "polyfills": [
+              "src/polyfills.ts"
+            ],
             "tsConfig": "src/tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -122,19 +126,26 @@
               ]
             },
             "scripts": [
-          "node_modules/jquery/dist/jquery.min.js",
-          "node_modules/tooltipster/dist/js/tooltipster.bundle.min.js",
-          "node_modules/tinycolor2/dist/tinycolor-min.js",
-          "node_modules/split.js/dist/split.min.js",
-          "node_modules/systemjs/dist/system.min.js",
-          "node_modules/marked/lib/marked.umd.js",
-          "node_modules/prismjs/prism.js",
-          "node_modules/prismjs/components/prism-css.min.js",
-          "node_modules/prismjs/components/prism-bash.min.js",
-          "node_modules/prismjs/components/prism-json.min.js",
-          "node_modules/prismjs/components/prism-javascript.min.js",
-          "node_modules/prismjs/components/prism-typescript.min.js",
-          "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js"
+              "node_modules/tinycolor2/dist/tinycolor-min.js",
+              "node_modules/split.js/dist/split.min.js",
+              "node_modules/systemjs/dist/system.min.js",
+              "node_modules/marked/lib/marked.umd.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-css.min.js",
+              "node_modules/prismjs/components/prism-bash.min.js",
+              "node_modules/prismjs/components/prism-json.min.js",
+              "node_modules/prismjs/components/prism-javascript.min.js",
+              "node_modules/prismjs/components/prism-typescript.min.js",
+              "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js",
+              "node_modules/flot/source/jquery.flot.js",
+              "node_modules/flot/source/jquery.colorhelpers.js",
+              "node_modules/flot/source/jquery.flot.time.js",
+              "node_modules/flot/source/jquery.flot.selection.js",
+              "node_modules/flot/source/jquery.flot.pie.js",
+              "node_modules/flot/source/jquery.flot.crosshair.js",
+              "node_modules/flot/source/jquery.flot.stack.js",
+              "node_modules/flot/source/jquery.flot.symbol.js",
+              "node_modules/flot.curvedlines/curvedLines.js"
             ],
             "allowedCommonJsDependencies": [
               "*"
@@ -169,12 +180,12 @@
               ]
             },
             "development": {
-            "fileReplacements": [
-              {
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.dev.ts"
-              }
-            ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
               "optimization": {
                 "scripts": false,
                 "styles": {
@@ -194,7 +205,9 @@
           "options": {
             "buildTarget": "thingsboard:build",
             "proxyConfig": "proxy.conf.js",
-            "middlewares": ["./esbuild/tb-html-fallback-middleware.ts"]
+            "middlewares": [
+              "./esbuild/tb-html-fallback-middleware.ts"
+            ]
           },
           "configurations": {
             "production": {
